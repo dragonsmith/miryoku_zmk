@@ -55,7 +55,7 @@ jobs:
         kconfig: ${{ fromJSON(inputs.kconfig) }}
         branches: ${{ fromJSON(inputs.branches) }}
     env:
-      MIRYOKU_DEBUG: ${{ secrets.MIRYOKU_DEBUG }}
+      MIRYOKU_DEBUG: MIRYOKU_DEBUG_TRUE
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -153,6 +153,12 @@ jobs:
                 git clone -b "$outboard_ref" --depth 1 "$outboard_repository" "$outboard_dir"
                 if [ -n "$outboard_from" -a -n "$outboard_to" ]
                 then
+                  echo to="${GITHUB_WORKSPACE}/miryoku_zmk/config/$outboard_to"
+                  echo mkdir -p `dirname "$to"`
+                  echo ln -sr "$outboard_dir/$outboard_from" "$to"
+                  echo $PWD
+                  ls -lah
+                  ls -lah miryoku_zmk
                   to="${GITHUB_WORKSPACE}/miryoku_zmk/config/$outboard_to"
                   mkdir -p `dirname "$to"`
                   ln -sr "$outboard_dir/$outboard_from" "$to"

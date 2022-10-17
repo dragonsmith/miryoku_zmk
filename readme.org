@@ -11,6 +11,25 @@ This document describes Miryoku ZMK only.  For Miryoku documentation, implementa
 
 See the [[docs/quickstart][Miryoku ZMK Quickstart Guide]] to have a personalised build running on your keyboard in a few minutes without installing any software or editing any files.
 
+** Personalisation
+
+This is my personal adaptation of the Miryoku ZMK. DAO keyboard support added.
+
+DAO requires *two* separate builds for two different boards:
+
+- dao_left
+- dao_right
+
+Other values that I use:
+
+- alphas: *QWERTY*
+- navigation: *vi*
+- buffer: *Mac*
+
+I also use a modified *Colemak DH Matrix* MacOS layout, which I'm attaching to this repo too.
+
+All this hassle is requires for me to type in russian too.
+
 ** Overview
 
 [[#building][Building]] can be performed [[#local-builds][locally]], or via GitHub Actions [[#workflow-builds][workflows]] without use of a local build environment.  Many keyboards are [[#supported-keyboards][supported]], and building out-of-tree keyboards is automatically supported by the workflows.
@@ -472,6 +491,6 @@ For [[#workflow-builds][workflow builds]] for the ~xmk~ shield, use the Build Ex
 Also see [[https://github.com/manna-harbour/miryoku_kmonad][Miryoku KMonad]].
 
 
-** 
+**
 
 [[https://github.com/manna-harbour][https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/logos/manna-harbour-boa-32.png]]

@@ -1,0 +1,7 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+outboard_repository=dragonsmith/skeletyl-zmk-config
+outboard_ref=master
+outboard_from=config/boards/shields/skeletyl_nicenano_handwired
+outboard_to=boards/shields/skeletyl_nicenano_handwired
